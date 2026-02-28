@@ -42,7 +42,8 @@ Construction sites are among the most hazardous work environments. Falls, struck
 
 ## 📊 Dataset
 
-- **Source:** Stored directly in this repository under `images dataset/`
+- **Source:** [Roboflow — Construction Safety Dataset](https://universe.roboflow.com/fyp1-dzcqx/construction-safety-rw6pc/browse?queryText=&pageSize=50&startingIndex=0&browseQuery=true)
+- **Storage:** Stored directly in this repository under `images dataset/`
 - **Format:** YOLOv8 (YOLO-formatted `.txt` annotation files)
 - **Split:** 80% Train / 20% Validation
 - **Dataset Version:** `v1.0`
@@ -118,7 +119,7 @@ See [`/results/`](./results/) for:
 
 ## ✅ Reproducibility Checklist
 
-- [ ] **Dataset:** Stored in `images dataset/` within the repository
+- [ ] **Dataset:** Stored in `images dataset/` — [Original Source](https://universe.roboflow.com/fyp1-dzcqx/construction-safety-rw6pc/browse?queryText=&pageSize=50&startingIndex=0&browseQuery=true)
 - [ ] **Model variant:** `yolov8n` (YOLOv8 Nano)
 - [ ] **Epochs:** 50
 - [ ] **Batch size:** 16
@@ -211,13 +212,13 @@ Pre-trained weights are available via GitHub Releases:
 
 This project is licensed under the **MIT License** — see [LICENSE](./LICENSE) for details.
 
-**Dataset Rights:** The dataset is stored directly in this repository under `images dataset/`. Refer to the original source for specific usage terms.
+**Dataset Rights:** Originally sourced from [Roboflow Universe — Construction Safety](https://universe.roboflow.com/fyp1-dzcqx/construction-safety-rw6pc/browse?queryText=&pageSize=50&startingIndex=0&browseQuery=true) and stored locally in `images dataset/`. Refer to the original dataset page for specific usage terms.
 
 ---
 
 ## 🙏 Acknowledgments
 
 - [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics)
-- [Roboflow](https://roboflow.com/) for dataset hosting and annotation tools
+- [Roboflow](https://roboflow.com/) for dataset hosting and annotation tools — [Construction Safety Dataset](https://universe.roboflow.com/fyp1-dzcqx/construction-safety-rw6pc/browse?queryText=&pageSize=50&startingIndex=0&browseQuery=true)
 - [Segment Anything Model (SAM)](https://segment-anything.com/) for exploration experiments
 - Google Colab for free GPU access
