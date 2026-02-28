@@ -56,7 +56,7 @@ Construction sites are among the most hazardous work environments. Falls, struck
 
 ### Quick Start
 1. Open the training notebook:  
-   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/notebooks/01_training_eval.ipynb)
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/musleh557790473-cell/Construction-Site-Safety-Monitoring-YOLOv8-Object-Detection/blob/main/notebooks/01_training_eval.ipynb)
 
 2. In Colab: **Runtime → Change runtime type → GPU (T4)**
 
@@ -72,8 +72,8 @@ Construction sites are among the most hazardous work environments. Falls, struck
 ### Manual Steps
 ```bash
 # 1. Clone the repo (dataset included)
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/musleh557790473-cell/Construction-Site-Safety-Monitoring-YOLOv8-Object-Detection.git
+cd Construction-Site-Safety-Monitoring-YOLOv8-Object-Detection
 
 # 2. Install dependencies
 pip install ultralytics==8.2.0
@@ -188,7 +188,7 @@ See [`/results/`](./results/) for:
 ## 🔗 Weights
 
 Pre-trained weights are available via GitHub Releases:  
-📥 **[Download best.pt](https://github.com/YOUR_USERNAME/YOUR_REPO/releases/tag/v1.0)**
+📥 **[Download best.pt](https://github.com/musleh557790473-cell/Construction-Site-Safety-Monitoring-YOLOv8-Object-Detection/releases/tag/v1.0)**
 
 ---
 
