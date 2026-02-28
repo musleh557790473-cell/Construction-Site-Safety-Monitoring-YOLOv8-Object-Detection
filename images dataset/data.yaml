@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 6
+names: ['2m above platform', 'Belt', 'hole', 'machinery', 'open-hole', 'worker']
+
+roboflow:
+  workspace: fyp1-dzcqx
+  project: construction-safety-rw6pc
+  version: 7
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/fyp1-dzcqx/construction-safety-rw6pc/dataset/7
