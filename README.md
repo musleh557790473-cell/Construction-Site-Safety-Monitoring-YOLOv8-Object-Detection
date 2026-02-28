@@ -42,13 +42,12 @@ Construction sites are among the most hazardous work environments. Falls, struck
 
 ## 📊 Dataset
 
-- **Source:** [Roboflow — Construction Safety Dataset](https://universe.roboflow.com/)  
-  _(Replace with your exact Roboflow dataset URL)_
+- **Source:** Stored directly in this repository under `images dataset/`
 - **Format:** YOLOv8 (YOLO-formatted `.txt` annotation files)
 - **Split:** 80% Train / 20% Validation
-- **Dataset Version:** `v1.0` _(update to match your export version)_
+- **Dataset Version:** `v1.0`
 - **Total Images:** ~X,XXX _(update with actual count)_
-- **Augmentations applied at export:** _(list any Roboflow augmentations)_
+- **Access:** The notebooks clone the repo automatically — no Roboflow account or API key required.
 
 ---
 
@@ -63,25 +62,26 @@ Construction sites are among the most hazardous work environments. Falls, struck
 3. **Runtime → Restart runtime → Run all**
 
 4. The notebook will:
-   - Install dependencies (`ultralytics`, `roboflow`)
-   - Download the dataset from Roboflow
+   - Clone the repository and access the dataset from `images dataset/`
+   - Install dependencies (`ultralytics`)
    - Train YOLOv8 for ≥30 epochs (or load pre-trained weights)
    - Display metrics (P/R/mAP) and training curves
    - Run inference on validation + new images
 
 ### Manual Steps
 ```bash
-# 1. Install dependencies
-pip install ultralytics==8.2.0 roboflow
+# 1. Clone the repo (dataset included)
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+cd YOUR_REPO
 
-# 2. Download dataset (from Roboflow)
-# See notebook for API key setup
+# 2. Install dependencies
+pip install ultralytics==8.2.0
 
 # 3. Train
-yolo detect train model=yolov8n.pt data=data.yaml epochs=50 imgsz=640 batch=16
+yolo detect train model=yolov8n.pt data="images dataset/data.yaml" epochs=50 imgsz=640 batch=16
 
 # 4. Evaluate
-yolo detect val model=runs/detect/train/weights/best.pt data=data.yaml
+yolo detect val model=runs/detect/train/weights/best.pt data="images dataset/data.yaml"
 
 # 5. Inference
 yolo detect predict model=runs/detect/train/weights/best.pt source=path/to/images
@@ -118,7 +118,7 @@ See [`/results/`](./results/) for:
 
 ## ✅ Reproducibility Checklist
 
-- [ ] **Dataset version/link:** Roboflow `v1.0` — [Link](https://universe.roboflow.com/YOUR_LINK)
+- [ ] **Dataset:** Stored in `images dataset/` within the repository
 - [ ] **Model variant:** `yolov8n` (YOLOv8 Nano)
 - [ ] **Epochs:** 50
 - [ ] **Batch size:** 16
@@ -128,7 +128,6 @@ See [`/results/`](./results/) for:
 - [ ] **Pip freeze snippet:**
   ```
   ultralytics==8.2.0
-  roboflow==1.1.40
   torch==2.1.0+cu121
   ```
 
@@ -153,6 +152,14 @@ See [`/results/`](./results/) for:
 ```
 ├── README.md                          # This file
 ├── LICENSE                            # MIT License
+├── images dataset/
+│   ├── data.yaml                      # Dataset config (paths + class names)
+│   ├── train/
+│   │   ├── images/                    # Training images
+│   │   └── labels/                    # Training labels (.txt YOLO format)
+│   └── valid/
+│       ├── images/                    # Validation images
+│       └── labels/                    # Validation labels
 ├── notebooks/
 │   ├── 01_training_eval.ipynb         # Full training + evaluation pipeline
 │   └── 02_baseline_inference.ipynb    # Baseline inference + SAM exploration
@@ -204,7 +211,7 @@ Pre-trained weights are available via GitHub Releases:
 
 This project is licensed under the **MIT License** — see [LICENSE](./LICENSE) for details.
 
-**Dataset Rights:** The dataset is sourced from Roboflow Universe under its public dataset license. Please refer to the original dataset page for specific usage terms.
+**Dataset Rights:** The dataset is stored directly in this repository under `images dataset/`. Refer to the original source for specific usage terms.
 
 ---
 
